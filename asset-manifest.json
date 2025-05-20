@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dr-karnav-shashtri/static/css/main.fee782cd.css",
-    "main.js": "/dr-karnav-shashtri/static/js/main.961ad3dc.js",
+    "main.css": "/dr-karnav-shashtri/static/css/main.f1bb15e1.css",
+    "main.js": "/dr-karnav-shashtri/static/js/main.de723ea8.js",
     "static/js/453.7a1bad5b.chunk.js": "/dr-karnav-shashtri/static/js/453.7a1bad5b.chunk.js",
     "index.html": "/dr-karnav-shashtri/index.html",
-    "main.fee782cd.css.map": "/dr-karnav-shashtri/static/css/main.fee782cd.css.map",
-    "main.961ad3dc.js.map": "/dr-karnav-shashtri/static/js/main.961ad3dc.js.map",
+    "main.f1bb15e1.css.map": "/dr-karnav-shashtri/static/css/main.f1bb15e1.css.map",
+    "main.de723ea8.js.map": "/dr-karnav-shashtri/static/js/main.de723ea8.js.map",
     "453.7a1bad5b.chunk.js.map": "/dr-karnav-shashtri/static/js/453.7a1bad5b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fee782cd.css",
-    "static/js/main.961ad3dc.js"
+    "static/css/main.f1bb15e1.css",
+    "static/js/main.de723ea8.js"
   ]
 }
