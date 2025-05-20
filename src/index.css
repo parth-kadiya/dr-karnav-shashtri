@@ -1,0 +1,1343 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdf1eb;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    background-color: #ff5a5f; 
+}
+
+.nav-toggle.active .close-icon {
+    color: #ff5a5f;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.close-icon {
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Show close icon when nav is active */
+.nav-toggle.active .close-icon {
+    display: block;
+}
+
+.nav-toggle.active .hamburger {
+    display: none;
+}
+
+header.hide {
+    transform: translateY(-100%);
+}
+
+header.show {
+    transform: translateY(0);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff5a5f;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo-text {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav a:hover, .nav a.active {
+    color: #ff5a5f;
+    border-bottom: 2px solid #ff5a5f;
+}
+
+.donate-btn {
+    background-color: #ff5a5f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.donate-btn:hover {
+    background-color: #e14c4e;
+}
+
+/* Karnavbhai Section */
+.karnavbhai {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.karnavbhai-image {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: -1;
+}
+
+.karnavbhai-content {
+    max-width: 600px;
+    color: #333; 
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.karnavbhai h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.karnavbhai p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fdf1eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us-image {
+    flex: 1;
+    max-width: 60%;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content {
+    flex: 2;
+    max-width: 40%;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.about-us-content h4 {
+    font-size: 20px;
+    font-style: italic;
+    color: #b89f84;
+    margin-bottom: 10px;
+}
+
+.about-us-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-us-content .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d88a6d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-us-content .read-more:hover {
+    background-color: #c77a5f;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fdf1eb;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+.feature-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fdeae5;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.feature-item:hover::before {
+    left: 0;
+}
+
+.feature-item:hover {
+    transform: scale(1.02);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #fdeae5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.icon-circle img {
+    width: 50%;
+}
+
+.feature-content {
+    text-align: left;
+    z-index: 1;
+}
+
+.feature-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Journey Section */
+.journey-section {
+    background: #fdf1eb;
+    padding: 60px 10%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.journey-heading {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.journey-heading h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d49466;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #d49466;
+    transform: translateX(-50%);
+}
+
+.journey-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.journey-box {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 0;
+}
+
+.journey-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background: #fdeae5;
+    transition: right 0.5s ease;
+    z-index: -1;
+}
+
+.journey-box:hover::before {
+    right: 0;
+}
+
+.journey-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.journey-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.journey-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Spiritual Section */
+.spiritual-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fdf1eb;
+}
+
+.spiritual-heading h4 {
+    font-size: 18px;
+    color: #d1884f;
+    margin-bottom: 10px;
+}
+
+.spiritual-heading h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.spiritual-heading p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.spiritual-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.spiritual-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 0;
+}
+
+.spiritual-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background: #fdeae5;
+    transition: right 0.5s ease;
+    z-index: -1;
+}
+
+.spiritual-card:hover::before {
+    right: 0;
+}
+
+.spiritual-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stars {
+    font-size: 18px;
+    color: #ffb703;
+    margin-bottom: 15px;
+}
+
+.spiritual-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.spiritual-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.spiritual-card span {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Image and News Section Styles */
+.image-news-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fdf1eb;
+}
+
+.section-heading h4 {
+    font-size: 18px;
+    font-style: italic;
+    color: #b89f84;
+    margin-bottom: 10px;
+}
+
+.section-heading h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+}
+
+.carousel-track {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.carousel-item {
+    min-width: 260px;
+    margin-right: 20px;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Online Katha Section Styles */
+.online-katha {
+    padding: 50px 20px;
+    background-color: #fdf1eb;
+    display: flex;
+    justify-content: center;
+}
+
+.online-katha-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.online-katha-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.online-katha-video {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.online-katha-video iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.online-katha-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding: 20px;
+    text-align: justify;
+}
+
+.online-katha-content h4 {
+    font-size: 20px;
+    font-style: italic;
+    color: #b89f84;
+    margin-bottom: 10px;
+}
+
+.online-katha-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.online-katha-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.online-katha-content .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d88a6d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.online-katha-content .read-more:hover {
+    background-color: #c77a5f;
+}
+
+/* Contact Form */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fdf1eb;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-container h4 {
+    font-size: 18px;
+    font-style: italic;
+    color: #b89f84;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea,
+button.send-button {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+
+textarea {
+    height: 120px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #d4846e;
+}
+
+button.send-button {
+    background-color: #d4846e;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.send-button:hover {
+    background-color: #a2836c;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #d4846e;
+    padding: 40px 20px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f1c4b0;
+}
+
+.logo-column h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logo-column .social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 18px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.logo-column .social-icons a:hover {
+    color: #f1c4b0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f1c4b0;
+}
+
+.phone-link {
+    color: white;
+    text-decoration: none;
+}
+
+.phone-link:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #e79d86;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #f1c4b0;
+}
+
+
+/* Tablet Devices (max-width: 1024px) */
+
+@media (min-width: 768px) and (max-width: 1025px) {
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #ffffff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Body padding for fixed header */
+    body {
+        padding-top: 70px;
+    }
+
+    /* Toggle button (Left side) */
+    .nav-toggle {
+        display: block;
+        order: -1;
+        margin-left: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    /* Logo (Center aligned) */
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        font-weight: bold;
+        color: #ff5757;
+        text-align: center;
+    }
+
+    /* Donate Button (Right side) */
+    .donate-btn {
+        margin-left: auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #ff5757;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    /* Hide the navigation menu by default */
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 12px 20px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .nav-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 15px; 
+    }
+
+    .nav-row.single {
+        justify-content: center;
+        padding: 5px;
+    }
+
+    /* Adjust sections for tablet view */
+    .karnavbhai {
+        flex-direction: column !important;
+        justify-content: center !important;
+        text-align: center !important;
+        height: auto !important;
+        padding: 50px 10px !important;
+    }
+
+    .karnavbhai-image {
+        position: relative !important;
+        object-fit: contain !important;
+    }
+
+    .karnavbhai h1 {
+        font-size: 36px;
+    }
+
+    .karnavbhai p {
+        font-size: 18px;
+    }
+
+    /* About Us Section */
+    .about-us {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .about-us-image,
+    .about-us-content {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    /* Features Section */
+    .features {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .feature-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Journey Section */
+    .journey-section {
+        padding: 30px;
+    }
+
+    .journey-box {
+        width: 100%;
+    }
+
+    /* Spiritual Cards */
+    .spiritual-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Online Katha Section */
+    .online-katha-container {
+        flex-direction: column;
+    }
+
+    .online-katha-video,
+    .online-katha-content {
+        max-width: 100%;
+    }
+
+    /* Carousel Items */
+    .carousel-item {
+        min-width: 300px;
+    }
+
+    /* Footer Section */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+
+/* Large Laptops and Desktops (1025px - 1440px) */
+@media (min-width: 1026px) and (max-width: 1440px) {
+    .karnavbhai-content {
+        max-width: 40%;
+    }
+
+    .karnavbhai h1 {
+        font-size: 48px;
+    }
+
+    .karnavbhai p {
+        font-size: 18px;
+    }
+
+    .about-us {
+        padding: 50px;
+    }
+
+    .about-us-image {
+        max-width: 50%;
+    }
+
+    .about-us-content {
+        max-width: 50%;
+    }
+
+    .features {
+        padding: 50px;
+    }
+
+    .feature-item {
+        width: 40%;
+    }
+
+    .journey-section {
+        padding: 50px;
+    }
+
+    .journey-box {
+        width: 45%;
+    }
+
+    .spiritual-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .online-katha-container {
+        flex-direction: row;
+    }
+
+    .online-katha-video,
+    .online-katha-content {
+        max-width: 50%;
+    }
+
+    .carousel-item {
+        min-width: 260px;
+    }
+
+    .footer-container {
+        gap: 50px;
+    }
+}
+
+/* Extra Large Screens (1441px and above) */
+@media (min-width: 1441px) {
+    .karnavbhai-content {
+        max-width: 50%;
+    }
+
+    .karnavbhai h1 {
+        font-size: 56px;
+    }
+
+    .karnavbhai p {
+        font-size: 20px;
+    }
+
+    .about-us {
+        padding: 60px;
+    }
+
+    .about-us-image {
+        max-width: 50%;
+    }
+
+    .about-us-content {
+        max-width: 50%;
+    }
+
+    .features {
+        padding: 60px;
+    }
+
+    .feature-item {
+        width: 30%;
+    }
+
+    .journey-section {
+        padding: 60px;
+    }
+
+    .journey-box {
+        width: 45%;
+    }
+
+    .spiritual-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .online-katha-container {
+        flex-direction: row;
+    }
+
+    .online-katha-video,
+    .online-katha-content {
+        max-width: 50%;
+    }
+
+    .carousel-item {
+        min-width: 280px;
+    }
+
+    .footer-container {
+        gap: 60px;
+    }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+    header {
+        position: fixed; 
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #ffffff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+    
+    .nav-toggle {
+        display: block;
+        order: -1;
+        margin-left: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
+    
+    .logo {
+        flex: 1;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ff5757;
+    }
+    
+    .donate-btn {
+        margin-left: auto;
+        padding: 8px 15px;
+        font-size: 14px;
+        background-color: #ff5757;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+    
+    .nav-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 15px; 
+    }
+
+    .nav-row.single {
+        justify-content: center;
+        padding: 5px;
+    }
+    
+    .nav a {
+        flex: 1;
+        text-align: center;
+        padding: 8px; 
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .hamburger {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        position: relative;
+    }
+    
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger::before {
+        top: -8px;
+    }
+    
+    .hamburger::after {
+        top: 8px;
+    }
+    
+    .close-icon {
+        display: none;
+        font-size: 22px;
+        color: #333;
+    }
+    
+    .nav-toggle.active .hamburger {
+        display: none;
+    }
+    
+    .nav-toggle.active .close-icon {
+        display: block;
+    }
+    
+
+    /* Adjust other sections for mobile */
+    .karnavbhai {
+        flex-direction: column !important;
+        justify-content: center !important;
+        text-align: center !important;
+        height: auto !important;
+        padding: 50px 20px !important;
+    }
+
+    .karnavbhai-image {
+        position: relative !important;
+        object-fit: contain !important;
+        border-radius: 10px !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .karnavbhai-content {
+        max-width: 100% !important;
+    }
+
+    .karnavbhai h1 {
+        font-size: 32px !important;
+    }
+
+    .karnavbhai p {
+        font-size: 16px !important;
+    }
+    
+    .about-us {
+        flex-direction: column !important;
+        padding: 20px !important;
+    }
+
+    .about-us-image,
+    .about-us-content {
+        max-width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .feature-item {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align items */
+        text-align: center; /* Center align text */
+    }
+
+    .icon-circle {
+        margin-bottom: 10px; /* Space between icon and content */
+    }
+
+    
+    .journey-section {
+        padding: 20px !important;
+    }
+
+    .journey-box {
+        width: 100% !important;
+    }
+
+    .spiritual-cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    .online-katha-container {
+        flex-direction: column !important;
+    }
+
+    .online-katha-video,
+    .online-katha-content {
+        max-width: 100% !important;
+    }
+
+    .carousel-item {
+        min-width: 200px !important;
+    }
+
+    .footer-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+}
