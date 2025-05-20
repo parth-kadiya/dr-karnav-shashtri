@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #fdf1eb;
+    padding-top: 60px; /* header ki actual height ke hisaab se adjust karein */
 }
 
 header {
@@ -146,8 +147,9 @@ header.show {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    /* height: 100vh; */
+    overflow: visible;
+    min-height: 100vh;
 }
 
 .karnavbhai-image {

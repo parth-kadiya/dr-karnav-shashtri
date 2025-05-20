@@ -1,10 +1,15 @@
+// src/components/Karnavbhai.js
 import React from 'react';
 
 export default function Karnavbhai() {
+  // PUBLIC_URL + path with space needs encoding
+  const rawPath = `${process.env.PUBLIC_URL}/assets/Image 1.jpg`;
+  const imgSrc = encodeURI(rawPath);
+
   return (
-    <section className="karnavbhai" id='karnavbhai'>
+    <section className="karnavbhai" id="karnavbhai">
       <img
-        src="Image 1.jpg"
+        src={imgSrc}
         alt="Karnavbhai img"
         className="karnavbhai-image"
       />

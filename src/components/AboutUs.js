@@ -1,10 +1,15 @@
+// src/components/AboutUs.js
 import React from 'react';
 
 export default function AboutUs() {
+  // PUBLIC_URL + path with space needs encoding
+  const rawPath = `${process.env.PUBLIC_URL}/assets/Image 2.jpg`;
+  const imgSrc = encodeURI(rawPath);
+
   return (
     <section className="about-us" id="about-us">
       <div className="about-us-image">
-        <img src="Image 2.jpg" alt="karnavbhai img" />
+        <img src={imgSrc} alt="Karnavbhai" />
       </div>
       <div className="about-us-content">
         <h4>About</h4>

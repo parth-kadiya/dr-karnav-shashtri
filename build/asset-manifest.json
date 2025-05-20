@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dr-karnav-shashtri/static/css/main.6ba6da53.css",
+    "main.js": "/dr-karnav-shashtri/static/js/main.53628c6b.js",
+    "static/js/453.7a1bad5b.chunk.js": "/dr-karnav-shashtri/static/js/453.7a1bad5b.chunk.js",
+    "index.html": "/dr-karnav-shashtri/index.html",
+    "main.6ba6da53.css.map": "/dr-karnav-shashtri/static/css/main.6ba6da53.css.map",
+    "main.53628c6b.js.map": "/dr-karnav-shashtri/static/js/main.53628c6b.js.map",
+    "453.7a1bad5b.chunk.js.map": "/dr-karnav-shashtri/static/js/453.7a1bad5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ba6da53.css",
+    "static/js/main.53628c6b.js"
+  ]
+}
