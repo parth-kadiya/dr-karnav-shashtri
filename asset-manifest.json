@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dr-karnav-shashtri/static/css/main.f1bb15e1.css",
-    "main.js": "/dr-karnav-shashtri/static/js/main.de723ea8.js",
+    "main.js": "/dr-karnav-shashtri/static/js/main.bf18e249.js",
     "static/js/453.7a1bad5b.chunk.js": "/dr-karnav-shashtri/static/js/453.7a1bad5b.chunk.js",
     "index.html": "/dr-karnav-shashtri/index.html",
     "main.f1bb15e1.css.map": "/dr-karnav-shashtri/static/css/main.f1bb15e1.css.map",
-    "main.de723ea8.js.map": "/dr-karnav-shashtri/static/js/main.de723ea8.js.map",
+    "main.bf18e249.js.map": "/dr-karnav-shashtri/static/js/main.bf18e249.js.map",
     "453.7a1bad5b.chunk.js.map": "/dr-karnav-shashtri/static/js/453.7a1bad5b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f1bb15e1.css",
-    "static/js/main.de723ea8.js"
+    "static/js/main.bf18e249.js"
   ]
 }
