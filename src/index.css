@@ -6,7 +6,6 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #fdf1eb;
-    padding-top: 60px; /* header ki actual height ke hisaab se adjust karein */
 }
 
 header {

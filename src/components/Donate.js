@@ -1,3 +1,4 @@
+// src/components/Donate.js
 import React, { useEffect } from 'react';
 import './Donate.css';
 
@@ -6,19 +7,22 @@ export default function Donate() {
     window.scrollTo(0, 0);  // माउंट होते ही टॉप पर स्क्रॉल
   }, []);
 
-  const qrImage = '/Gpay.png';  // ← update if your QR code filename is different
+  // PUBLIC_URL के साथ assets path
+  const rawPath = `${process.env.PUBLIC_URL}/assets/Gpay.png`;
+  const qrImage = encodeURI(rawPath); // spaces को encode करने के लिए
 
   // Download handler
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = qrImage;
-    link.download = qrImage.replace('/', '');
+    // download attribute में सिर्फ filename चाहिए
+    link.download = 'Gpay.png';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
-  // Share handler (uses Web Share API)
+  // Share handler (Web Share API)
   const handleShare = async () => {
     if (navigator.share) {
       try {
