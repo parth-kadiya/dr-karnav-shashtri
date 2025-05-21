@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dr-karnav-shashtri/static/css/main.f1bb15e1.css",
-    "main.js": "/dr-karnav-shashtri/static/js/main.de723ea8.js",
-    "static/js/453.7a1bad5b.chunk.js": "/dr-karnav-shashtri/static/js/453.7a1bad5b.chunk.js",
-    "index.html": "/dr-karnav-shashtri/index.html",
-    "main.f1bb15e1.css.map": "/dr-karnav-shashtri/static/css/main.f1bb15e1.css.map",
-    "main.de723ea8.js.map": "/dr-karnav-shashtri/static/js/main.de723ea8.js.map",
-    "453.7a1bad5b.chunk.js.map": "/dr-karnav-shashtri/static/js/453.7a1bad5b.chunk.js.map"
+    "main.css": "/dr-react/static/css/main.f1bb15e1.css",
+    "main.js": "/dr-react/static/js/main.7f056540.js",
+    "static/js/453.7a1bad5b.chunk.js": "/dr-react/static/js/453.7a1bad5b.chunk.js",
+    "index.html": "/dr-react/index.html",
+    "main.f1bb15e1.css.map": "/dr-react/static/css/main.f1bb15e1.css.map",
+    "main.7f056540.js.map": "/dr-react/static/js/main.7f056540.js.map",
+    "453.7a1bad5b.chunk.js.map": "/dr-react/static/js/453.7a1bad5b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f1bb15e1.css",
-    "static/js/main.de723ea8.js"
+    "static/js/main.7f056540.js"
   ]
 }
